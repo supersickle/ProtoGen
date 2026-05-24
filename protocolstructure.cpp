@@ -39,7 +39,7 @@ ProtocolStructure::ProtocolStructure(ProtocolParser* parse, std::string parent, 
     redefines(nullptr)
 {
     // List of attributes understood by ProtocolStructure
-    attriblist = {"name",  "title",  "array",  "variableArray",  "array2d",  "variable2dArray",  "dependsOn",  "comment",  "hidden",  "neverOmit", "limitOnEncode", "dbctx", "dbcrx"};
+    attriblist = {"name",  "title",  "array",  "variableArray",  "array2d",  "variable2dArray",  "dependsOn", "dependsOnValue", "dependsOnCompare", "comment",  "hidden",  "neverOmit", "limitOnEncode", "dbctx", "dbcrx"};
 
 }
 

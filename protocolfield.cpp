@@ -3730,7 +3730,7 @@ std::string ProtocolField::getDBCSignalString(std::string prename, int* bitcount
                         start += exponentbits;
 
                         // c) lasts bits are significand - with implied leading one, range is from 1.0 to 2.0, so offset is 1, and scaler is 1.0/2^sigbits
-                        output += " SG_ " + localname + " : " + getDBCBitWidthString(sigbits, start, false, support.bigendian) + " (" + std::to_string(1.0/(0x1<<sigbits)) + ",1) [" + std::to_string(1.0) + "|" + std::to_string(2.0) + "]";
+                        output += " SG_ " + localname + " : " + getDBCBitWidthString(sigbits, start, false, support.bigendian) + " (" + std::to_string(1.0/(0x1ull<<sigbits)) + ",1) [" + std::to_string(1.0) + "|" + std::to_string(2.0) + "]";
 
                         // Units data appears on the significand line
                         if((extraInfoNames.size() > 0) && (extraInfoValues.size() > 0) && (extraInfoNames.at(0) == "Units"))
